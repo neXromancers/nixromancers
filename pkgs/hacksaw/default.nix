@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage rec {
   meta = with stdenv.lib; {
     description = "Lets you select areas of your screen (on X11)";
     homepage = https://github.com/neXromancers/hacksaw;
-    license = with licenses; [ mpl2 ];
+    license = with licenses; [ mpl20 ];
     maintainers = with maintainers; [ bb010g ];
     platforms = platforms.all;
   };

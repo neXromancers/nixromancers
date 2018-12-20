@@ -21,7 +21,7 @@ rustPlatform.buildRustPackage rec {
   meta = with stdenv.lib; {
     description = "A minimal screenshot utility for X11";
     homepage = https://github.com/neXromancers/shotgun;
-    license = with licenses; [ mpl2 ];
+    license = with licenses; [ mpl20 ];
     maintainers = with maintainers; [ bb010g ];
     platforms = platforms.all;
   };
