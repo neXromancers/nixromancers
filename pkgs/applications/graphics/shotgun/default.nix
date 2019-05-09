@@ -3,7 +3,7 @@
 }:
 
 rustPlatform.buildRustPackage rec {
-  name = "shotgun-${version}";
+  pname = "shotgun";
   version = "2.1.0";
 
   src = fetchFromGitHub {
