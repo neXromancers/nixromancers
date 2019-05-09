@@ -1,6 +1,5 @@
-{ stdenv, rustPlatform, fetchFromGitHub
+{ stdenv, rustPlatform, buildPackages, fetchFromGitHub
 , libX11, libXrandr
-, pkgconfig
 }:
 
 rustPlatform.buildRustPackage rec {
@@ -16,7 +15,7 @@ rustPlatform.buildRustPackage rec {
 
   cargoSha256 = "1zvmzmdwq9ddngfdk6psng1z1mvsdn3vqkzaavs0d90fj7lxlnvx";
 
-  nativeBuildInputs = [ pkgconfig ];
+  nativeBuildInputs = [ buildPackages.pkgconfig ];
   buildInputs = [ libX11 libXrandr ];
 
   meta = with stdenv.lib; {
