@@ -19,6 +19,17 @@ in rec {
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  hacksaw = needsNewCargoVendor' (pkgs.callPackage ./pkgs/hacksaw { });
-  shotgun = needsNewCargoVendor' (pkgs.callPackage ./pkgs/shotgun { });
+  # # applications
+
+  # ## applications.graphics
+
+  shotgun = needsNewCargoVendor'
+    (pkgs.callPackage ./pkgs/applications/graphics/shotgun { });
+
+  # # tools
+
+  # ## tools.misc
+
+  hacksaw = needsNewCargoVendor'
+    (pkgs.callPackage ./pkgs/tools/misc/hacksaw { });
 }
