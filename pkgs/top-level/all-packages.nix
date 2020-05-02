@@ -29,6 +29,9 @@ in {
   uniconize = needsNewCargoHash
     (callPackage ../tools/misc/uniconize { });
 
+  uniconize-unstable = needsNewCargoHash
+    (callPackage ../tools/misc/uniconize/unstable.nix { });
+
   # }}}1
 
 }
