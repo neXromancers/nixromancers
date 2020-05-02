@@ -21,8 +21,10 @@ in {
   # tools {{{1
   # tools.misc {{{2
 
-  hacksaw = needsNewCargoHash
-    (callPackage ../tools/misc/hacksaw { });
+  hacksaw = self.hacksaw-unstable;
+
+  hacksaw-unstable = needsNewCargoHash
+    (callPackage ../tools/misc/hacksaw/unstable.nix { });
 
   # }}}1
 
